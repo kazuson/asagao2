@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(version: 20151002083254) do
 
   create_table "members", force: :cascade do |t|
-    t.integer  "number",                       null: false
-    t.string   "name",                         null: false
+    t.integer  "number",                        null: false
+    t.string   "name",                          null: false
     t.string   "full_name"
     t.string   "email"
     t.date     "birthday"
-    t.integer  "gender",                       null: false
-    t.boolean  "adminstrator", default: false, null: false
+    t.integer  "gender",        default: 0,     null: false
+    t.boolean  "administrator", default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
