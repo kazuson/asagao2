@@ -2,7 +2,15 @@ class CreateMembers < ActiveRecord::Migration
   def change
     create_table :members do |t|
 
-      t.timestamps null: false
+      t.integer :number,null: false
+      t.string :name, null: false
+      t.string :full_name
+      t.string :email
+      t.date :birthday
+      t.integer :gender, null: false, defaultl: 0
+      t.boolean :adminstrator, null: false, default: false
+      t.timestamps
+
     end
   end
 end
